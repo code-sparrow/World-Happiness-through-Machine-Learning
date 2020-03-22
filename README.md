@@ -11,35 +11,35 @@ Revisiting Project-1 with Machine Learning
 
 * Rows removed with empty cells  
 
-* Target Variables (min, mean, max)  
+* Target Variables  _(min, mean, max)_  
 
-	- Ladder Score (2.375092, 5.445810, 8.018934)  
+	- Ladder Score  _(2.375092,  5.445810,  8.018934)_  
 
-* Features Variables (min, mean, max)  
+* Features Variables  _(min, mean, max)_  
 
-	- GDP per capita (6.456574, 9.244531, 11.728235)  
+	- GDP per capita  _(6.456574,  9.244531,  11.728235)_  
 
-	- Social support (0.290184, 0.290184, 0.987343)  
+	- Social support  _(0.290184,  0.290184,  0.987343)_  
 
-	- Healthy life expectancy at birth (32.299999, 63.169525,77.099998)  
+	- Healthy life expectancy at birth  _(32.299999,  63.169525,  77.099998)_  
 
-	- Freedom to make life choices (0.257534, 0.738467, 0.985178)  
+	- Freedom to make life choices  _(0.257534,  0.738467,  0.985178)_  
 
-	- Generosity (-0.331775, 0.000109, 0.679921)  
+	- Generosity  _(-0.331775,  0.000109,  0.679921)_  
 
-	- Perceptions of corruption (0.035198, 0.749064, 0.983276)  
+	- Perceptions of corruption  _(0.035198,  0.749064,  0.983276)_  
 
 # Data Exploration  
 
 ## 2-D Relationships between each Feature and the Target variable (Ladder Score)  
 
-![Simple_Relationships](resources/Simple_Relationships.PNG)  
+![Simple_Relationships](resources/Simple_Relationships.png)  
 
 ## Feature Selection  
 
 ### Correlation Matrix  
 
-![heatmap](resources/heatmap.PNG)  
+![heatmap](resources/heatmap.png)  
 
 * Strongest correlations with the target variable **Ladder** are **GDP**, **Support**, and **Health** (with **0.779501**, **0.710214**, and **0.750692**)  
 
@@ -65,4 +65,16 @@ Revisiting Project-1 with Machine Learning
 
 * Red dots are "Happy"  
 
-![Categorical_Relationships](resources/Categorical_Relationships.PNG)
+![Categorical_Relationships](resources/Categorical_Relationships.png)  
+
+# Contributors 
+
+* __Claudia Palmer-Martinez:__ [github](https://github.com/Claud50623)  
+
+* __Alexandra Solano:__ [github](https://github.com/alexsolano36)  
+
+* __Donatienne Noel:__ [github](https://github.com/donatiennenoel)  
+
+* __John S. Chapek:__ [github](https://github.com/code-sparrow)
+
+
