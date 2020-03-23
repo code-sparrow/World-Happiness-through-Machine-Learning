@@ -3,7 +3,11 @@ Revisiting Project-1 with Machine Learning
 
 # Data Source  
 
-* [World Happiness Report](https://worldhappiness.report/)
+* [World Happiness Report](https://worldhappiness.report/)  
+
+* Training Set: **_2005 - 2019_**  
+
+* Test Set: **_2020_**  
 
 # Data Prep  
 
@@ -13,21 +17,21 @@ Revisiting Project-1 with Machine Learning
 
 * Target Variables  _(min, mean, max)_  
 
-	- Ladder Score  _(2.375092,  5.445810,  8.018934)_  
+	- `Ladder Score`  _(2.375092,  5.445810,  8.018934)_  
 
 * Features Variables  _(min, mean, max)_  
 
-	- GDP per capita  _(6.456574,  9.244531,  11.728235)_  
+	- `GDP per capita`  _(6.456574,  9.244531,  11.728235)_  
 
-	- Social support  _(0.290184,  0.290184,  0.987343)_  
+	- `Social support`  _(0.290184,  0.290184,  0.987343)_  
 
-	- Healthy life expectancy at birth  _(32.299999,  63.169525,  77.099998)_  
+	- `Healthy life expectancy at birth`  _(32.299999,  63.169525,  77.099998)_  
 
-	- Freedom to make life choices  _(0.257534,  0.738467,  0.985178)_  
+	- `Freedom to make life choices`  _(0.257534,  0.738467,  0.985178)_  
 
-	- Generosity  _(-0.331775,  0.000109,  0.679921)_  
+	- `Generosity`  _(-0.331775,  0.000109,  0.679921)_  
 
-	- Perceptions of corruption  _(0.035198,  0.749064,  0.983276)_  
+	- `Perceptions of corruption`  _(0.035198,  0.749064,  0.983276)_  
 
 # Data Exploration  
 
@@ -61,11 +65,15 @@ Revisiting Project-1 with Machine Learning
 
 ### Visualizing all possible relationships between features in 2-dimensions  
 
-* Made the Ladder score a Category by saying any value grater-than 6 is a 1 ("Happy"), and a 0 otherwise  
+* Made the Ladder score a Category by saying any value greater-than 6 is a 1 ("Happy"), and a 0 otherwise  
 
 * Red dots are "Happy"  
 
 ![Categorical_Relationships](resources/Categorical_Relationships.png)  
+
+# Multivariable Linear Regression
+
+Using all the features in a linear regression we obtained a score of `$R^2 = 0.745$` on the training set and a score of `$R^2 = 0.736$` on the test set from the year 2020.  
 
 # Contributors 
 
