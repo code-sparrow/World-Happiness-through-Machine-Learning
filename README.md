@@ -17,7 +17,7 @@ Revisiting Project-1 with Machine Learning
 
 * Target Variables  _(min, mean, max)_  
 
-	- `Ladder Score`  _(2.375092,  5.445810,  8.018934)_  
+	- `Ladder Score`  $_(2.375092,  5.445810,  8.018934)$  
 
 * Features Variables  _(min, mean, max)_  
 
@@ -73,7 +73,7 @@ Revisiting Project-1 with Machine Learning
 
 # Multivariable Linear Regression
 
-Using all the features in a linear regression we obtained a score of `$R^2 = 0.745$` on the training set and a score of `$R^2 = 0.736$` on the test set from the year 2020.  
+Using all the features in a linear regression we obtained a score of $R^2 = 0.745$ on the training set and a score of $R^2 = 0.736$ on the test set from the year 2020.  
 
 # Contributors 
 
