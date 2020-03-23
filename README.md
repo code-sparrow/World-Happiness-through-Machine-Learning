@@ -52,6 +52,7 @@ Revisiting Project-1 with Machine Learning
 * The highest correlation between features is between **GDP** and **Health** with **0.843902**  
 
 * No features have a correlation greater than 0.9, so no features will be dropped based on the correlation matrix  
+---
 
 ### Based on P-value  
 
