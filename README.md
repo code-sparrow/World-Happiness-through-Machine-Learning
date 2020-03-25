@@ -99,7 +99,7 @@ Revisiting Project-1 with Machine Learning
 * The best parameters found are in the table below; yielding scores of **_R<sup>2</sup> = 0.911_** on the training set and **_R<sup>2</sup> = 0.859_** on the test set from the year 2020.  
 
 |   Hyperparameter   | Tuned Value |
-|:------------------:|-------------|
+|:-------------------|:-----------:|
 | `n_estimators`     |     500     |
 | `max_depth`        |      8      |
 | `max_features`     |     sqrt    |
