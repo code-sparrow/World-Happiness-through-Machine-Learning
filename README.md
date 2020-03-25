@@ -72,9 +72,68 @@ Revisiting Project-1 with Machine Learning
 
 ![Categorical_Relationships](resources/Categorical_Relationships.png)  
 
-# Multivariable Linear Regression
+# Multivariable Linear Regression  
 
-Using all the features in a linear regression we obtained a score of **_R<sup>2</sup> = 0.745_** on the training set and a score of **_R<sup>2</sup> = 0.736_** on the test set from the year 2020.  
+## Feature Scaling
+
+* Feature scaling wasn't required for sklearn's `LinearRegression` regressor  
+
+## Results
+
+* Using all the features in a linear regression we obtained a score of **_R<sup>2</sup> = 0.745_** on the training set and a score of **_R<sup>2</sup> = 0.736_** on the test set from the year 2020.  
+
+# Random Forest Regression  
+
+## Feature Scaling
+
+* Feature scaling wasn't required for sklearn's `RandomForestRegressor` regressor.  
+
+## Tuning Hyperparameters
+
+* Using `GridSearchCV` the parameters varied were `n_estimators` and `max_depth`.  
+
+* The plot below revealed that increasing `n_estimators` beyond a certain point did not improve accuracy, yieding diminishing returns. Similarly, increasing `max_depth` improved accuracy up to a certain point, then reduced it.  
+
+![Grid_Search_RFR](resources/grid_search_RFR.png)  
+ 
+* The best parameters found are in the table below; yielding scores of **_R<sup>2</sup> = 0.911_** on the training set and **_R<sup>2</sup> = 0.859_** on the test set from the year 2020.  
+
+|   Hyperparameter   | Tuned Value |
+|:------------------:|-------------|
+| `n_estimators`     |     500     |
+| `max_depth`        |      8      |
+| `max_features`     |     sqrt    |
+| `min_sample_leaf`  |      1      |
+| `min_sample_split` |      2      |
+| `bootstrap`        |     True    |
+
+## Feature Importance  
+
+* Seems on par with the correlation matrix, Health, GDP, and Support being the most impotant (Health is ranked the most important here)
+
+![Variable_Importance](resources/variable_importance.png)
+
+# SVM  
+
+* Should we include?  
+
+* Does it add any value or insight?  
+
+* I'm thinking NO  (aside from puurrdy plots)  
+ 
+
+![SVM_Support_Health](resources/SVM_Support_Health.png)  
+
+![SVM_Health_Corruption](resources/SVM_Health_Corruption.png)
+
+# Conclusions
+
+* Health, GDP, and Support are rated the most important features in predicting the Ladder score with the Random Forest Regression model.  
+
+* They are also found to correlate the strongest with Ladder in the correlation Matrix.
+
+* Although GDP is highly ranked, if we were able to do a more thorough analysis of feature importance, I think we would find that it is more a "means to an end". That a human's deeper (or essential) sense of well-being is more tied to Health and social factors like Support/Family. Economy helps us get there by putting food on our tables, providing for our families and friends, and having access to better healthcare. Machine learning seems like an interesting tool to help us understand and dissect the complexities and hidden variables behind human emotions.  
+
 
 # Contributors 
 
