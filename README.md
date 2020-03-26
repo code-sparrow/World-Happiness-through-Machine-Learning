@@ -84,6 +84,25 @@
 
 * Using all the features in a linear regression we obtained a score of **_R<sup>2</sup> = 0.745_** on the training set and a score of **_R<sup>2</sup> = 0.736_** on the test set from the year 2020.  
 
+* The adjusted R<sup>2</sup> on the test set was **_R<sup>2</sup><sub>adjusted</sub> = 0.727_**  
+
+* Loose interpretation based on removing one feature, each time, and calculating the adjusted R<sup>2</sup>
+
+|   Feature Removed   | **_R<sup>2</sup><sub>adjusted</sub> |
+|:--------------------|:-----------------------------------:|
+|    None             |        _0.727_                      |
+|    GDP              |        _0.714_                      |
+|  **Support**        |      **_0.691_**                    |
+|    Health           |        _0.714_                      |
+|    Freedom          |        _0.715_                      |
+|    Generosity       |        _0.723_                      |
+|    Corruption       |        _0.722_                      |  
+
+* The highest score was with no features removed. When Support was removed, it reduced the score the most, indicating it may be the most important feature in this linear model. Additionally, when Generosity and Corruption were individually removed, the adjusted score was not impacted as much, suggesting they are slightly less important than the other features.  
+
+* The order of importance would then be: **Support, GDP, Health, Freedom, Corruption, Generosity**  
+
+
 # Random Forest Regression  
 
 ## Feature Scaling
