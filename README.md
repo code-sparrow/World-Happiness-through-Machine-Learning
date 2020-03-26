@@ -1,5 +1,7 @@
-# final-project
-Revisiting Project-1 with Machine Learning
+# **_A Look at World Happiness through Machine Learning_**
+
+# Introduction  
+
 
 # Data Source  
 
@@ -96,7 +98,7 @@ Revisiting Project-1 with Machine Learning
 
 ![Grid_Search_RFR](resources/grid_search_RFR.png)  
  
-* The best parameters found are in the table below; yielding scores of **_R<sup>2</sup> = 0.911_** on the training set and **_R<sup>2</sup> = 0.859_** on the test set from the year 2020.  
+* With a more thorough GridSearch, the best parameters found are in the table below; yielding scores of **_R<sup>2</sup> = 0.911_** on the training set and **_R<sup>2</sup> = 0.859_** on the test set from the year 2020.  
 
 |   Hyperparameter   | Tuned Value |
 |:-------------------|:-----------:|
