@@ -39,7 +39,7 @@
 
 ## 2-D Relationships between each Feature and the Target variable (Ladder Score)  
 
-![Simple_Relationships](resources/Simple_Relationships.png)  
+![scatter_matrix](resources/scatter_matrix.png)  
 
 ## Feature Selection  
 
