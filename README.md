@@ -152,21 +152,21 @@ The project is based on The World Happiness Report issued annually by the United
 
 ## Conclusions  
 
-* Methods of feature selection indicated all features were meaningful additions to models _(correlation matrix and p-values)_
+* Methods of feature selection indicated all features were meaningful additions to models _(correlation matrix and p-values)_  
 
-* Linear Regression (LR) resulted in _R<sup>2</sup><sub>adjusted</sub> = 73%_ (higher than first project)
+* Linear Regression (LR) resulted in _R<sup>2</sup><sub>adjusted</sub> = 73%_ (higher than first project)  
 
-* Feature importance in LR indicated Support to be most important feature, reducing score the most _(R<sup>2</sup><sub>adjusted</sub>_ = 69%)_
+* Feature importance in LR indicated Support to be most important feature, reducing score the most _(R<sup>2</sup><sub>adjusted</sub> = 69%)_  
 
-* Random Forest Regression (RFR) was more accurate with _R<sup>2</sup><sub>adjusted</sub> = 85%_ on the test set
+* Random Forest Regression (RFR) was more accurate with _R<sup>2</sup><sub>adjusted</sub> = 85%_ on the test set  
 
-* Limiting the max_depth in RFR seemed to keep testing and training scores closer together, indicating less overfitting of the training set
+* Limiting the max_depth in RFR seemed to keep testing and training scores closer together, indicating less overfitting of the training set  
 
-* Feature importance in RFR indicated Health to be the most important, followed by GDP and Support
+* Feature importance in RFR indicated Health to be the most important, followed by GDP and Support  
 
-* Health, GDP, and Support are rated the most important features in predicting the Ladder score with the RFR model.  
+* Health, GDP, and Support are rated the most important features in predicting the Ladder score with the RFR model  
 
-* They are also found to correlate the strongest with Ladder in the correlation Matrix.
+* They are also found to correlate the strongest with Ladder in the correlation Matrix  
 
 * Although GDP is highly ranked, if we were able to do a more thorough analysis of feature importance, I think we would find that it is more a "means to an end". That a human's deeper (or essential) sense of well-being is more tied to Health and social factors like Support/Family. Economy helps us get there by putting food on our tables, providing for our families and friends, and having access to better healthcare. Machine learning seems like an interesting tool to help us understand and dissect the complexities and hidden variables behind human emotions.  
 
