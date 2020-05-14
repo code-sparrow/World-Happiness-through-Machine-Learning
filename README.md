@@ -1,9 +1,12 @@
-# **_A Look at World Happiness through Machine Learning_**
+# **_A Look at World Happiness through Machine Learning_**  
 
-# Introduction  
+Utilizing machine learning and data from the World Happiness Report, this project aimed to predict a country’s happiness score from features such as GDP, Health, and Social Support and also to draw insights into the most factors that go into a country’s happiness score.  
 
+## Background  
 
-# Data Source  
+The project is based on The World Happiness Report issued annually by the United Nations. This concept goes well with the idea of Machine Learning because it is an attempt to quantify human emotion. Respondents in each country were asked a basic question: _"Imagine that life is a ladder, with the bottom rung being the worst life you can imagine and the top rung being the best life you can imagine, where are you on the ladder?"_
+
+## Data Source  
 
 * [World Happiness Report](https://worldhappiness.report/)  
 
@@ -11,7 +14,7 @@
 
 * Test Set: **_2020_**  
 
-# Data Prep  
+## Data Prep  
 
 * Unnecessary columns removed  
 
@@ -35,15 +38,15 @@
 
 	- `Perceptions of corruption`  _<sub>(0.035198,  0.749064,  0.983276)</sub>_  
 
-# Data Exploration  
+## Data Exploration  
 
-## 2-D Relationships between each Feature and the Target variable (Ladder Score)  
+### 2-D Relationships between each Feature and the Target variable (Ladder Score)  
 
 ![scatter_matrix](resources/scatter_matrix.png)  
 
-## Feature Selection  
+### Feature Selection  
 
-### Correlation Matrix  
+#### Correlation Matrix  
 
 ![heatmap](resources/heatmap.png)  
 
@@ -56,7 +59,7 @@
 * No features have a correlation greater than 0.9, so no features will be dropped based on the correlation matrix  
 ---
 
-### Based on P-value  
+#### Based on P-value  
 
 ![OLS](resources/OLS.PNG)  
 
@@ -64,9 +67,9 @@
 
 * All features will be kept
 
-## Feature Engineering  
+### Feature Engineering  
 
-### Visualizing all possible relationships between features in 2-dimensions  
+#### Visualizing all possible relationships between features in 2-dimensions  
 
 * Made the Ladder score a Category by saying any value greater-than 6 is a 1 ("Happy"), and a 0 otherwise  
 
@@ -74,13 +77,13 @@
 
 ![Categorical_Relationships](resources/Categorical_Relationships.png)  
 
-# Multivariable Linear Regression  
+## Multivariable Linear Regression  
 
-## Feature Scaling
+### Feature Scaling
 
 * Feature scaling wasn't required for sklearn's `LinearRegression` regressor  
 
-## Results
+### Results
 
 * Using all the features in a linear regression we obtained a score of **_R<sup>2</sup> = 0.745_** on the training set and a score of **_R<sup>2</sup> = 0.736_** on the test set from the year 2020.  
 
@@ -103,13 +106,13 @@
 * The order of importance would then be: **Support, GDP, Health, Freedom, Corruption, Generosity**  
 
 
-# Random Forest Regression  
+## Random Forest Regression  
 
-## Feature Scaling
+### Feature Scaling
 
 * Feature scaling wasn't required for sklearn's `RandomForestRegressor` regressor.  
 
-## Tuning Hyperparameters
+### Tuning Hyperparameters
 
 * Using `GridSearchCV` the parameters varied were `n_estimators` and `max_depth`.  
 
@@ -128,13 +131,13 @@
 | `min_sample_split` |      2        |
 | `bootstrap`        |     True      |
 
-## Feature Importance  
+### Feature Importance  
 
 * Seems on par with the correlation matrix, Health, GDP, and Support being the most impotant (Health is ranked the most important here)
 
 ![Variable_Importance](resources/variable_importance.png)
 
-# SVM  
+## SVM  
 
 * Should we include?  
 
@@ -147,16 +150,28 @@
 
 ![SVM_Health_Corruption](resources/SVM_Health_Corruption.png)
 
-# Conclusions
+## Conclusions  
 
-* Health, GDP, and Support are rated the most important features in predicting the Ladder score with the Random Forest Regression model.  
+* Methods of feature selection indicated all features were meaningful additions to models _(correlation matrix and p-values)_
+
+* Linear Regression (LR) resulted in _R<sup>2</sup><sub>adjusted</sub> = 73%_ (higher than first project)
+
+* Feature importance in LR indicated Support to be most important feature, reducing score the most _(R<sup>2</sup><sub>adjusted</sub>_ = 69%)_
+
+* Random Forest Regression (RFR) was more accurate with _R<sup>2</sup><sub>adjusted</sub> = 85%_ on the test set
+
+* Limiting the max_depth in RFR seemed to keep testing and training scores closer together, indicating less overfitting of the training set
+
+* Feature importance in RFR indicated Health to be the most important, followed by GDP and Support
+
+* Health, GDP, and Support are rated the most important features in predicting the Ladder score with the RFR model.  
 
 * They are also found to correlate the strongest with Ladder in the correlation Matrix.
 
 * Although GDP is highly ranked, if we were able to do a more thorough analysis of feature importance, I think we would find that it is more a "means to an end". That a human's deeper (or essential) sense of well-being is more tied to Health and social factors like Support/Family. Economy helps us get there by putting food on our tables, providing for our families and friends, and having access to better healthcare. Machine learning seems like an interesting tool to help us understand and dissect the complexities and hidden variables behind human emotions.  
 
 
-# Contributors 
+## Contributors 
 
 * __Claudia Palmer-Martinez:__ [github](https://github.com/Claud50623)  
 
