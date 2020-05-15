@@ -1,6 +1,6 @@
 # **_A Look at World Happiness through Machine Learning_**  
 
-Utilizing machine learning and data from the World Happiness Report, this project aimed to predict a country’s happiness score from features such as GDP, Health, and Social Support and also to draw insights into the most factors that go into a country’s happiness score.  
+Utilizing machine learning and data from the World Happiness Report, this project aimed to predict a country’s happiness score from features such as GDP, Health, and Social Support and also to draw insights into the most important factors that go into a country’s happiness score.  
 
 ## Background  
 
